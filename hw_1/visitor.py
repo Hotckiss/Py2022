@@ -3,8 +3,8 @@ from zlib import adler32
 
 
 class AstVisitor:
-    def __init__(self, graph):
-        self._ast = graph
+    def __init__(self, tree):
+        self._ast = tree
         self._order = 0
 
     def visit(self, node):
