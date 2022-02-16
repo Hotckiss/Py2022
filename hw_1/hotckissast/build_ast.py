@@ -1,6 +1,6 @@
 import ast
 import networkx
-from visitor import AstVisitor
+from .visitor import AstVisitor
 
 
 def build_ast(source_file_path, image_path):
