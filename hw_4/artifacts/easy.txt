@@ -1,0 +1,6 @@
+cpu count: 12
+
+Single process run time: 4.5 n=10
+Multithreading time: 3.25 n=10
+Multiprocessing time: 2.15 n=10
+
