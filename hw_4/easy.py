@@ -21,10 +21,10 @@ def run_sync(f, *args, n=10):
         f(*args)
 
 
-def run_threading(func, *args, n=10):
+def run_threading(f, *args, n=10):
     threads = []
     for _ in range(n):
-        t = threading.Thread(target=func, args=args)
+        t = threading.Thread(target=f, args=args)
         t.start()
         threads.append(t)
 
@@ -32,10 +32,10 @@ def run_threading(func, *args, n=10):
         t.join()
 
 
-def run_multiprocess(func, *args, n=10):
+def run_multiprocess(f, *args, n=10):
     processes = []
     for _ in range(n):
-        p = multiprocessing.Process(target=func, args=args)
+        p = multiprocessing.Process(target=f, args=args)
         p.start()
         processes.append(p)
 
